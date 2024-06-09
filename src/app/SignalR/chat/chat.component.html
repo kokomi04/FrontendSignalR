@@ -1,0 +1,14 @@
+<div>
+  <div class="div">
+    <p>userId: </p>
+    <input type="number" [(ngModel)]="userId" (ngModelChange)="onChangeGroup()">
+    <p>orderId: </p>
+    <input type="number" [(ngModel)]="newOrderId" (ngModelChange)="onChangeGroup()">
+  </div>
+  <h2>Chat</h2>
+  <div *ngFor="let message of messages">
+    <strong>{{message.user}}</strong>: {{message.message}}
+  </div>
+  <input [(ngModel)]="newMessage" placeholder="Enter your message" />
+  <button (click)="sendMessage()">Send</button>
+</div>
